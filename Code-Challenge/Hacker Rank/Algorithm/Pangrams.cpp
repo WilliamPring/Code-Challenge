@@ -4,25 +4,26 @@
 #include <iostream>
 #include <algorithm>
 #include <stdio.h>
-
+#define MAXLENGTH 20000
+#define CHECKMAXLENGTH 200
 using namespace std;
  int main() {  
    /* Enter your code here. Read input from STDIN. Print output to STDOUT */   
-   char arr[10000]; 
+   char buffer[MAXLENGTH]; 
      bool status = true;
-   gets(arr);  
-   int a[150]={0};  
-   for(int i =0;arr[i]!='\0';i++){  
+   gets(buffer);  
+   int arrayToCheck[CHECKMAXLENGTH]={0};  
+   for(int i =0;buffer[i]!='\0';i++){  
      char t;  
-     t = tolower(arr[i]);  
+     t = tolower(buffer[i]);  
      int n = t;  
      if(n>0)  
      {  
-       a[n]++;  
+       arrayToCheck[n]++;  
      }  
    }  
     for(int i = 97;i<123;i++){  
-     if(a[i]==0){  
+     if(arrayToCheck[i]==0){  
        status = false;  
      }  
    }  
