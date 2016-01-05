@@ -12,32 +12,32 @@ int main()
     int count;
     cin >> count;
 
-    while(count > 0)
-        {
+    while (count > 0)
+    {
         bool status = true;
-            string stringInput ="";
-            string stringInput1 = "";
-             cin >> stringInput;
-                cin >> stringInput1;
-    for (int i =0; i < stringInput1.length(); i++)
+        string stringInput = "";
+        string stringInput1 = "";
+        cin >> stringInput;
+        cin >> stringInput1;
+        for (int i = 0; i < stringInput1.length(); i++)
         {
-      if (stringInput.find(stringInput1[i]) != std::string::npos)
+            if (stringInput.find(stringInput1[i]) != std::string::npos)
         {
-          status = false;
+            status = false;
             printf("YES\n");
-                break;
+            break;
         }
-        }
-        if (status == true)
-            {
-                        printf("NO\n");
-        }
-        else
-            {
-            status = true;
-        }
-    count--;
     }
+    if (status == true)
+    {
+        printf("NO\n");
+    }
+    else
+    {
+        status = true;
+    }
+    count--;
+}
 
-	
+
 }
